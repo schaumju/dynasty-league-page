@@ -7,7 +7,8 @@ export const enableBlog = false; // requires VITE_CONTENTFUL_ACCESS_TOKEN and VI
 
 /*   STEP 2   */
 export const homepageText = `
-  <p> Homepage Text TODO </p>
+  <p>Founded in 2020, the LOC Dynasty League is a switch from our normal redraft league that we have been doing for several years now. The league rules have been constantly tweaked in order to find the best balance possible including changes to the roster size as well as transitioning from 1 QB to Superflex.</p>
+  <p> We are hoping this league continues for many many years so teams can experience both rebuilding and competing for a title</p>
 `;
 
 /*   STEP 3   */
@@ -157,7 +158,7 @@ export const managers = [
       "name": "Justin",
       "tookOver": null, // (optional) used if a manager took over a team, delete this line or change to null otherwise
       "location": "San Francisco", // (optional)
-      "bio": "Lorem ipsum...",
+      "bio": null,
       "photo": "/managers/justin.jpg", // square ratio recommended (no larger than 500x500)
       "fantasyStart": 2020, // (optional) when did the manager start playing fantasy football
       "favoriteTeam": "nyg", // (optional) favorite NFL team, (follows convention: nyj, sea, mia, etc.) MUST BE LOWERCASE
@@ -170,7 +171,7 @@ export const managers = [
       "favoritePlayer": 8150, // (optional) this corresponds to the Sleeper player ID (https://api.sleeper.app/v1/players/nfl)
       "valuePosition": null, // (optional) Favorite position (QB, WR, RB, TE, etc.)
       "rookieOrVets": null, // (optional) 'Rookies' or 'Vets' (anything else and you will need to add a new png to /static/ similar to the 'Rookies.png' and 'Vets.png' currently in there)
-      "philosophy": "Your fantasy team's philosophy",
+      "philosophy": "Trade rape Tyler",
       "tradingScale": 10, // 1 - 10
       "preferredContact": null, // 'Text', 'WhatsApp', 'Sleeper', 'Email', 'Phone', 'Discord', and 'Carrier Pigeon' are currently supplied in the template
     },

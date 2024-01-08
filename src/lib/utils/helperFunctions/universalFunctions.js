@@ -199,12 +199,21 @@ export const getTeamData = (users, ownerID) => {
     }
 }
 
-export const getAvatarFromTeamManagers = (teamManagers, rosterID, year) => {
-    if(!year || year > teamManagers.currentSeason) {
-        year = teamManagers.currentSeason;
-    }
-    return teamManagers.teamManagersMap[year][rosterID].team.avatar;
-}
+export const getAvatarFromTeamManagers = (teamManagers, rosterID, year) => 
+	{ 
+		if(!year || year > teamManagers.currentSeason) { 
+			year = teamManagers.currentSeason; 
+		} 
+		const yearManagers = teamManagers.teamManagersMap[year]; 
+		if (!yearManagers) { 
+			// Handle the case where the year is not in teamManagersMap return null; // or a default value 
+		} 
+		const roster = yearManagers[rosterID]; 
+		if (!roster || !roster.team) { 
+			// Handle the case where rosterID is not found or team is undefined return null; // or a default value 
+		} 
+		return roster.team.avatar; 
+	}
 
 export const getTeamNameFromTeamManagers = (teamManagers, rosterID, year) => {
     if(!year || year > teamManagers.currentSeason) {
